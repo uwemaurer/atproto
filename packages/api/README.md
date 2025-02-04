@@ -350,7 +350,7 @@ instantiating the sessionManager with a custom fetch implementation:
 ```typescript
 import { AtpAgent } from '@atproto/api'
 
-const myFetch = (input: RequestInfo | URL, init?: RequestInit) => {
+const myFetch = async (input: RequestInfo | URL, init?: RequestInit) => {
   console.log('requesting', input)
   const response = await globalThis.fetch(input, init)
   console.log('got response', response)
